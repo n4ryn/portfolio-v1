@@ -34,8 +34,8 @@ function App() {
         </p>
 
         <p className="text-black dark:text-white">
-          As a software engineer, I craft captivating digital experiences that
-          seamlessly blend technical expertise and UI design
+          As a Full Stack Developer, I craft captivating digital experiences
+          that seamlessly blend technical expertise and UI design
         </p>
         <p className="text-black dark:text-white">Portfolio In Progress</p>
 
