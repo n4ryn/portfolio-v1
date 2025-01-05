@@ -2,8 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        text: {
+          primary: "var(--color-text-primary)",
+        },
+        background: {
+          primary: "var(--color-background-primary)",
+        },
+      },
+    },
   },
   plugins: [],
-  darkMode: "selector",
 };
