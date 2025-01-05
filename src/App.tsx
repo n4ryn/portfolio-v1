@@ -1,25 +1,18 @@
+import About from "./components/About";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeProvider } from "./provider/ThemeProvider";
 
 function App() {
   return (
     <ThemeProvider>
-      <div className="bg-background-primary min-h-screen py-8">
-        <div className="m-auto max-w-[600px] p-6 flex flex-col gap-4 items-left">
+      <div className="min-h-screen grid grid-rows-[1fr_auto]">
+        <main className="mx-auto p-6 w-full">
           <Header />
-
-          <p className="text-xl font-bold text-text-primary">
-            Hi, I'm Vinay Kumar 👋
-          </p>
-
-          <p className="text-text-primary">
-            As a Full Stack Developer, I craft captivating digital experiences
-            that seamlessly blend technical expertise and UI design
-          </p>
+          <About />
           <p className="text-text-primary">Portfolio In Progress</p>
-
-          <div></div>
-        </div>
+        </main>
+        <Footer />
       </div>
     </ThemeProvider>
   );

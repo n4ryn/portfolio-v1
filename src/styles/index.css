@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Text Colors */
+  --color-text-primary: theme("colors.neutral.900");
+  --color-text-secondary: theme("colors.neutral.500");
+
+  /* Background Colors */
+  --color-background-primary: theme("colors.neutral.100");
+  --color-background-secondary: theme("colors.neutral.200");
+
+  /* Button Colors */
+  --color-button-primary: theme("colors.neutral.800");
+  --color-button-primary-hover: theme("colors.neutral.700");
+  --color-button-text: theme("colors.neutral.100");
+  --color-button-secondary: theme("colors.neutral.200");
+  --color-button-secondary-hover: theme("colors.neutral.300");
+}
+
+.dark {
+  /* Text Colors */
+  --color-text-primary: theme("colors.neutral.100");
+  --color-text-secondary: theme("colors.neutral.400");
+
+  /* Background Colors */
+  --color-background-primary: theme("colors.neutral.900");
+  --color-background-secondary: theme("colors.neutral.800");
+
+  /* Button Colors */
+  --color-button-primary: theme("colors.neutral.100");
+  --color-button-primary-hover: theme("colors.neutral.200");
+  --color-button-text: theme("colors.neutral.900");
+  --color-button-secondary: theme("colors.neutral.800");
+  --color-button-secondary-hover: theme("colors.neutral.700");
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-button-primary text-button-text px-2 py-2 rounded-lg 
+           transition-colors duration-200 
+           hover:bg-button-primary-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-button-secondary text-text-primary px-2 py-2 rounded-lg 
+           transition-colors duration-200 
+           hover:bg-button-secondary-hover;
+  }
+
+  .btn-outline {
+    @apply border-2 border-button-primary text-text-primary px-2 py-2 rounded-lg 
+           transition-colors duration-200 
+           hover:bg-button-secondary;
+  }
+}

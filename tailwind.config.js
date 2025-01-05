@@ -6,9 +6,18 @@ export default {
       colors: {
         text: {
           primary: "var(--color-text-primary)",
+          secondary: "var(--color-text-secondary)",
         },
         background: {
           primary: "var(--color-background-primary)",
+          secondary: "var(--color-background-secondary)",
+        },
+        button: {
+          primary: "var(--color-button-primary)",
+          "primary-hover": "var(--color-button-primary-hover)",
+          secondary: "var(--color-button-secondary)",
+          "secondary-hover": "var(--color-button-secondary-hover)",
+          text: "var(--color-button-text)",
         },
       },
     },

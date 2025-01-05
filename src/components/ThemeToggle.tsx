@@ -1,5 +1,5 @@
 import { RxMoon, RxSun } from "react-icons/rx";
-import { useTheme } from "./ThemeProvider";
+import { useTheme } from "../context/theme.context.tsx";
 
 const ThemeToggle = () => {
   const { isDarkMode, setIsDarkMode } = useTheme();
