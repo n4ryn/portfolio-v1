@@ -22,15 +22,13 @@ const About = () => {
       </h1>
 
       <p className="text-text-secondary font-light text-sm mb-4 leading-6">
-        {DESCRIPTION_TEXT.prefix}
-        {DESCRIPTION_TEXT.techs.map((tech) => (
-          <HighlightedText key={tech} text={tech} />
-        ))}
-        {DESCRIPTION_TEXT.middle}
-        {DESCRIPTION_TEXT.domains.map((domain) => (
-          <HighlightedText key={domain} text={domain} />
-        ))}
-        {DESCRIPTION_TEXT.suffix}
+        {DESCRIPTION_TEXT.parts.map((part, index) =>
+          part.highlight ? (
+            <HighlightedText key={index} text={part.text} />
+          ) : (
+            <span key={index}>{part.text}</span>
+          )
+        )}
       </p>
 
       <div className="flex justify-start items-center gap-4">

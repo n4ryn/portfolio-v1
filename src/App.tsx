@@ -6,7 +6,7 @@ import { ThemeProvider } from "./provider/ThemeProvider";
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-[calc(100vh-96px)] grid grid-rows-[1fr_auto]">
+      <div className="min-h-[calc(100vh-48px)] sm:min-h-[calc(100vh-96px)] flex flex-col">
         <main className="mx-auto p-6 w-full">
           <Header />
           <About />
