@@ -1,6 +1,6 @@
-import { SocialLink } from "../types";
+import { SocialLinkType } from "../types";
 
-const SocialButtons = ({ social }: { social: SocialLink }) => {
+const SocialButtons = ({ social }: { social: SocialLinkType }) => {
   const Icon = social.icon;
 
   const handleClick = () => {

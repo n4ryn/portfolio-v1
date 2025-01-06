@@ -1,6 +1,9 @@
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Projects from "./components/Projects";
+
 import { ThemeProvider } from "./provider/ThemeProvider";
 
 function App() {
@@ -10,7 +13,8 @@ function App() {
         <main className="mx-auto p-6 w-full">
           <Header />
           <About />
-          <p className="text-text-primary">Portfolio In Progress</p>
+          <Experience />
+          <Projects />
         </main>
         <Footer />
       </div>

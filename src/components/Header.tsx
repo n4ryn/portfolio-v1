@@ -6,7 +6,7 @@ const Header = () => {
       <div className="flex items-center gap-4">
         <a href="/" className="cursor-pointer">
           <img
-            src="/vinay.webp"
+            src="/vinay.jpeg"
             alt="Logo"
             className="h-12 w-12 rounded-full"
           />

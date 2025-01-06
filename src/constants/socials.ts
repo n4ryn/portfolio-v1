@@ -1,9 +1,9 @@
 import { RxGithubLogo, RxLinkedinLogo, RxTwitterLogo } from "react-icons/rx";
 import { MdAlternateEmail } from "react-icons/md";
 
-import { SocialLink } from "../types";
+import { SocialLinkType } from "../types";
 
-export const socialsInfo: SocialLink[] = [
+export const socialsInfo: SocialLinkType[] = [
   {
     id: 1,
     name: "Email",
