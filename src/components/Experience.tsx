@@ -1,17 +1,41 @@
-import { experience } from "../constants/experience";
+import { experiences } from "../constants/experience";
 import ExperienceCard from "./ExperienceCard";
+import { motion } from "motion/react";
 
 const Experience = () => {
-  return (
-    <section className="mb-12">
-      <h2 className="font-bold text-md text-text-primary mb-4">Experience</h2>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-      <div className="space-y-2">
-        {experience.map((exp) => (
-          <ExperienceCard key={exp.id} experience={exp} />
+  return (
+    <motion.section
+      className="mb-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariants}
+    >
+      <motion.h2
+        className="font-bold text-md text-text-primary mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Experience
+      </motion.h2>
+
+      <motion.div className="space-y-2">
+        {experiences.map((experience) => (
+          <ExperienceCard key={experience.id} experience={experience} />
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

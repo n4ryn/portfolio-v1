@@ -1,6 +1,6 @@
 import { ExperienceType } from "../types";
 
-export const experience: ExperienceType[] = [
+export const experiences: ExperienceType[] = [
   {
     id: 1,
     company: "Marktine",

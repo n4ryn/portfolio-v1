@@ -30,7 +30,7 @@ export const DESCRIPTION_TEXT = {
       highlight: false,
     },
     {
-      text: "frontend",
+      text: "Frontend",
       highlight: true,
     },
     {
@@ -38,7 +38,7 @@ export const DESCRIPTION_TEXT = {
       highlight: false,
     },
     {
-      text: "backend",
+      text: "Backend",
       highlight: true,
     },
     {

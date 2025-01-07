@@ -11,6 +11,7 @@ export default {
         background: {
           primary: "var(--color-background-primary)",
           secondary: "var(--color-background-secondary)",
+          tertiary: "var(--color-background-tertiary)",
         },
         button: {
           primary: "var(--color-button-primary)",
@@ -18,6 +19,9 @@ export default {
           secondary: "var(--color-button-secondary)",
           "secondary-hover": "var(--color-button-secondary-hover)",
           text: "var(--color-button-text)",
+        },
+        border: {
+          primary: "var(--color-border-primary)",
         },
       },
     },
