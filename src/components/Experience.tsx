@@ -30,7 +30,7 @@ const Experience = () => {
         Experience
       </motion.h2>
 
-      <motion.div className="space-y-2">
+      <motion.div className="space-y-6">
         {experiences.map((experience) => (
           <ExperienceCard key={experience.id} experience={experience} />
         ))}

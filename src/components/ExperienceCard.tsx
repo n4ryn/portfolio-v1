@@ -3,13 +3,13 @@ import { motion } from "motion/react";
 
 const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 0 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        delay: experience.id * 0.1,
+        duration: 1,
+        delay: experience.id * 0.2,
         ease: "easeOut",
       },
     },
@@ -30,7 +30,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative border-l border-border-primary pl-4 pb-8"
+      className="group relative border-l border-border-primary pl-4"
     >
       {/* Animated dot on timeline */}
       <motion.div
