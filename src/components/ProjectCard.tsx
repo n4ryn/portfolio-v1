@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         <motion.img
           src={project.image}
           alt={project.title}
-          className="aspect-[16/10] h-full w-full object-cover"
+          className="aspect-[16/10] h-full w-full"
           loading="lazy"
           variants={imageVariants}
           whileHover={{ scale: 1.05 }}
