@@ -19,8 +19,9 @@ const HighlightedText = ({ text }: { text: string }) => (
 
 const About = () => {
   const handleResumeClick = () => {
-    // Handle resume download logic
-    alert("Will be added soon");
+    const resumeUrl =
+      "https://drive.google.com/file/d/1DkH8NYsnjGSvPtMbOcidmrq1viGpPi3l/view?usp=sharing";
+    window.open(resumeUrl, "_blank", "noopener noreferrer");
   };
 
   const containerVariants = {
