@@ -34,7 +34,7 @@ const Projects = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
         variants={containerVariants}
       >
-        {projects.map((project) => (
+        {projects.reverse().map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </motion.div>

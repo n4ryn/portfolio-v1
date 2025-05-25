@@ -19,7 +19,7 @@ export interface ProjectType {
   description: string;
   live: string;
   github: string;
-  image: string;
+  image: string[];
   gradient: string;
 }
 
