@@ -48,6 +48,19 @@ const About = () => {
     },
   };
 
+  // Child animation variants
+  const fadeInVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: i * 0.1,
+      },
+    }),
+  };
+
   return (
     <motion.section
       className="mb-12"
@@ -72,9 +85,10 @@ const About = () => {
           ) : (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              custom={index}
+              variants={fadeInVariant}
+              initial="hidden"
+              animate="visible"
             >
               {part.text}
             </motion.span>
