@@ -20,7 +20,9 @@ export interface ProjectType {
   live: string;
   github: string;
   image: string[];
-  gradient: string;
+  projectStart: string;
+  projectEnd: string;
+  techStack: string[];
 }
 
 export interface ExperienceType {
