@@ -41,7 +41,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 
   return (
     <motion.div
-      className="rounded-2xl shadow-lg shadow-green-500/20"
+      className="rounded-2xl shadow-lg shadow-green-500/20 hover:shadow-green-500/40"
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
@@ -72,17 +72,25 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
             {project.title}
           </motion.h3>
           <motion.p
-            className="mt-2 text-xs font-light text-text-secondary"
+            className="mt-2 text-xs font-normal text-text-primary"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: project.id * 0.1 + 0.4 }}
+          >
+            {project.projectStart} - {project.projectEnd}
+          </motion.p>
+          <motion.p
+            className="mt-4 text-xs font-light text-text-secondary line line-clamp-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: project.id * 0.1 + 0.4 }}
           >
             {project.description}
           </motion.p>
-          <motion.div className="flex flex-wrap gap-2 mt-2">
+          <motion.div className="flex flex-wrap gap-2 mt-4">
             {project.techStack.map((item, index) => (
               <p
-                className="text-[8px]  bg-background-secondary hover:bg-background-primary-hover hover:text-text-primary-hover text-text-primary px-2 py-1 rounded-md"
+                className="text-[10px] bg-background-secondary hover:bg-background-primary-hover hover:text-text-primary-hover text-text-primary px-2 py-1 rounded-md transition duration-500 ease-in-out"
                 key={index}
               >
                 {item}
@@ -91,7 +99,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           </motion.div>
         </div>
 
-        <div className="flex justify-around items-center gap-2">
+        <div className="mt-4 flex justify-around items-center gap-2">
           <motion.a
             href={project.github}
             target="_blank"

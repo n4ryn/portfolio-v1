@@ -21,9 +21,7 @@ export const projects: ProjectType[] = [
     techStack: [
       "React.js",
       "Redux",
-      "Tailwind CSS",
       "DaisyUI",
-      "Node.js",
       "Express.js",
       "MongoDB",
       "AWS",
