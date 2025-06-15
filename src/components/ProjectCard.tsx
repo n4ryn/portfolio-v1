@@ -40,17 +40,14 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
       : project.image[0];
 
   return (
-    <motion.a
-      href={project.live}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block"
+    <motion.div
+      className="rounded-2xl shadow-lg shadow-green-500/20"
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="overflow-hidden rounded-2xl bg-gray-100"
+        className="overflow-hidden rounded-2xl"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.2 }}
       >
@@ -65,41 +62,61 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         />
       </motion.div>
 
-      <motion.div
-        className="mt-3 flex items-end justify-between"
-        variants={cardVariants}
-      >
+      <motion.div className="p-3 flex flex-col gap-2" variants={cardVariants}>
         <div>
           <motion.h3
-            className="text-sm font-normal text-text-primary"
+            className="text-md font-semibold text-text-primary"
             whileHover={{ x: 4 }}
             transition={{ duration: 0.2 }}
           >
             {project.title}
           </motion.h3>
           <motion.p
-            className="mt-0.5 text-xs font-extralight text-text-secondary"
+            className="mt-2 text-xs font-light text-text-secondary"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: project.id * 0.1 + 0.4 }}
           >
             {project.description}
           </motion.p>
-        </div>
-
-        <div className="flex flex-col gap-2 items-center">
-          <p onClick={() => window.open(project.github, "_blank")}>
-            <RxGithubLogo className="h-5 w-5 text-text-primary" />
-          </p>
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: -10 }}
-            transition={{ duration: 0.2 }}
-          >
-            <RxArrowTopRight className="h-5 w-5 text-text-primary" />
+          <motion.div className="flex flex-wrap gap-2 mt-2">
+            {project.techStack.map((item, index) => (
+              <p
+                className="text-[8px]  bg-background-secondary hover:bg-background-primary-hover hover:text-text-primary-hover text-text-primary px-2 py-1 rounded-md"
+                key={index}
+              >
+                {item}
+              </p>
+            ))}
           </motion.div>
         </div>
+
+        <div className="flex justify-around items-center gap-2">
+          <motion.a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-xs flex justify-center items-center gap-2 w-1/2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Github
+            <RxGithubLogo className="h-4 w-4" />
+          </motion.a>
+          <motion.a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-xs flex justify-center items-center gap-2 w-1/2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Website
+            <RxArrowTopRight className="h-4 w-4" />
+          </motion.a>
+        </div>
       </motion.div>
-    </motion.a>
+    </motion.div>
   );
 };
 

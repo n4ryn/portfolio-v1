@@ -22,7 +22,7 @@ export interface ProjectType {
   image: string[];
   projectStart: string;
   projectEnd: string;
-  techStack: string;
+  techStack: string[];
 }
 
 export interface ExperienceType {
