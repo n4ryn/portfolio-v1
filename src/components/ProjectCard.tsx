@@ -1,7 +1,9 @@
 import { RxArrowTopRight, RxGithubLogo } from "react-icons/rx";
-import { ProjectType } from "../types";
 import { motion } from "motion/react";
+
 import { useTheme } from "../context/theme.context.tsx";
+
+import { ProjectType } from "../types";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   const { isDarkMode } = useTheme();
@@ -41,7 +43,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 
   return (
     <motion.div
-      className="rounded-2xl shadow-lg shadow-green-500/20 hover:shadow-green-500/40"
+      className="rounded-2xl shadow-lg shadow-[#14eba3]/30 hover:shadow-[#14eba3]/60"
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
@@ -90,7 +92,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <motion.div className="flex flex-wrap gap-2 mt-4">
             {project.techStack.map((item, index) => (
               <p
-                className="text-[10px] bg-background-secondary hover:bg-background-primary-hover hover:text-text-primary-hover text-text-primary px-2 py-1 rounded-md transition duration-500 ease-in-out"
+                className="text-[10px] px-1.5 py-1 rounded-md text-text-primary hover:bg-[#14eba3]/20 transition duration-500 ease-in-out border border-[#14eba3]"
                 key={index}
               >
                 {item}
