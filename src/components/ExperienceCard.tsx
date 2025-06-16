@@ -1,5 +1,6 @@
-import { ExperienceType } from "../types";
 import { motion } from "motion/react";
+
+import { ExperienceType } from "../types";
 
 const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   const cardVariants = {
@@ -30,11 +31,11 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative border-l border-border-primary pl-4"
+      className="group relative border-l border-[#14eba3] pl-4"
     >
       {/* Animated dot on timeline */}
       <motion.div
-        className="absolute -left-[5px] top-[6px] h-2 w-2 rounded-full bg-background-tertiary"
+        className="absolute -left-[5px] top-[6px] h-2 w-2 rounded-full bg-[#14eba3]"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ delay: experience.id * 0.1, duration: 0.3 }}
@@ -63,7 +64,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
             {experience.company}
           </a>
           <span className="text-text-secondary">|</span>
-          <span className="text-text-primary">{experience.designation}</span>
+          <span className="text-text-secondary">{experience.designation}</span>
         </motion.div>
 
         <motion.p

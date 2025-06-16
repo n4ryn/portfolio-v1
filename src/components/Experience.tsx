@@ -1,6 +1,8 @@
-import { experiences } from "../constants/experience";
-import ExperienceCard from "./ExperienceCard";
 import { motion } from "motion/react";
+
+import ExperienceCard from "./ExperienceCard";
+
+import { experiences } from "../constants/experience";
 
 const Experience = () => {
   const containerVariants = {
@@ -15,14 +17,14 @@ const Experience = () => {
 
   return (
     <motion.section
-      className="mb-12"
+      className="mb-14"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
     >
       <motion.h2
-        className="font-bold text-md text-text-primary mb-4"
+        className="font-semibold italic text-xl text-text-primary mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

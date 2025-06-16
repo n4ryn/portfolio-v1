@@ -1,10 +1,12 @@
+import { useEffect, useState } from "react";
 import { RxDownload } from "react-icons/rx";
 import { motion } from "motion/react";
+import { RoughNotation } from "react-rough-notation";
 
 import SocialButtons from "./SocialButtons";
 
 import { socialsInfo } from "../constants/socials";
-import { DESCRIPTION_TEXT, INTRO_TEXT } from "../constants/about";
+import { DESCRIPTION_TEXT } from "../constants/about";
 
 const HighlightedText = ({ text }: { text: string }) => (
   <motion.span
@@ -18,6 +20,16 @@ const HighlightedText = ({ text }: { text: string }) => (
 );
 
 const About = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleResumeClick = () => {
     const resumeUrl =
       "https://drive.google.com/file/d/1DkH8NYsnjGSvPtMbOcidmrq1viGpPi3l/view?usp=sharing";
@@ -63,16 +75,30 @@ const About = () => {
 
   return (
     <motion.section
-      className="mb-12"
+      className="mb-14"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <motion.h1
-        className="text-3xl font-light text-text-primary mb-4"
+        className="text-5xl font-light text-text-primary mb-4 leading-[1.4]"
         variants={itemVariants}
       >
-        {INTRO_TEXT}
+        Crafting{" "}
+        <span className="italic font-medium font-serif">
+          digital experiences
+        </span>{" "}
+        that{" "}
+        <span id="myElement" className="text-md font-medium">
+          <RoughNotation
+            type="underline"
+            color="#14eba3"
+            iterations={4}
+            show={show}
+          >
+            matter.
+          </RoughNotation>
+        </span>
       </motion.h1>
 
       <motion.p
@@ -95,6 +121,14 @@ const About = () => {
           )
         )}
       </motion.p>
+
+      {/* <div className="flex justify-between p-4 bg-background-secondary border-2 border-border-primary rounded-lg">
+        npx n4ryn-cli
+        <RxCopy
+          onClick={() => navigator.clipboard.writeText("npx n4ryn-cli")}
+          className="cursor-pointer text-text-secondary hover:text-text-primary transition-colors duration-200"
+        />
+      </div> */}
 
       <motion.div
         className="flex justify-start items-center gap-4"
