@@ -8,7 +8,13 @@ export const projects: ProjectType[] = [
     projectEnd: "Jan 2025",
     description:
       "A minimal, responsive developer portfolio built with React.js, TypeScript, and Tailwind CSS. It features smooth animations using Framer Motion, clean UI.",
-    techStack: ["React.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion",
+      "React Animated Cursor",
+    ],
     live: "https://n4ryn.com/",
     github: "https://github.com/n4ryn/portfolio-v1",
     image: ["/project-1-light.png", "/project-1-dark.png"],
