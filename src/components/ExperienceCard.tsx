@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
         </motion.p>
 
         <motion.div
-          className="flex items-center gap-2 mb-2"
+          className="flex flex-col md:flex-row justify-between md:items-center md:gap-2 mb-2"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
@@ -63,8 +63,10 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
           >
             {experience.company}
           </a>
-          <span className="text-text-secondary">|</span>
-          <span className="text-text-secondary">{experience.designation}</span>
+
+          <span className="text-sm text-text-primary font-normal">
+            {experience.designation}
+          </span>
         </motion.div>
 
         <motion.p
