@@ -22,6 +22,9 @@
   --color-button-secondary-hover: theme("colors.neutral.300");
 
   --color-border-primary: theme("colors.neutral.400");
+
+  --color-border-primary: theme("colors.neutral.600");
+  --color-border-primary-hover: theme("colors.neutral.900");
 }
 
 .dark {
@@ -44,6 +47,9 @@
   --color-button-secondary-hover: theme("colors.neutral.700");
 
   --color-border-primary: theme("colors.neutral.400");
+
+  --color-border-primary: theme("colors.neutral.300");
+  --color-border-primary-hover: theme("colors.neutral.100");
 }
 
 @layer components {

@@ -25,6 +25,10 @@ export default {
         border: {
           primary: "var(--color-border-primary)",
         },
+        border: {
+          primary: "var(--color-border-primary)",
+          "primary-hover": "var(--color-border-primary-hover)",
+        },
       },
     },
   },

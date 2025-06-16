@@ -43,13 +43,13 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 
   return (
     <motion.div
-      className="rounded-2xl shadow-lg shadow-[#14eba3]/30 hover:shadow-[#14eba3]/60"
+      className="rounded-xl shadow-lg shadow-[#14eba3]/20 hover:shadow-[#14eba3]/40 border-b-2 border-r-2 border-[#14eba3]/30"
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="overflow-hidden rounded-2xl"
+        className="overflow-hidden rounded-xl"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.2 }}
       >
@@ -74,7 +74,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
             {project.title}
           </motion.h3>
           <motion.p
-            className="mt-2 text-xs font-normal text-text-primary"
+            className="mt-0 text-xs font-normal text-text-secondary"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: project.id * 0.1 + 0.4 }}
@@ -82,7 +82,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
             {project.projectStart} - {project.projectEnd}
           </motion.p>
           <motion.p
-            className="mt-4 text-xs font-light text-text-secondary line line-clamp-3"
+            className="mt-4 text-xs font-light text-text-primary line line-clamp-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: project.id * 0.1 + 0.4 }}
@@ -92,7 +92,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <motion.div className="flex flex-wrap gap-2 mt-4">
             {project.techStack.map((item, index) => (
               <p
-                className="text-[10px] px-1.5 py-1 rounded-md text-text-primary hover:bg-[#14eba3]/20 transition duration-500 ease-in-out border border-[#14eba3]"
+                className="text-[10px] px-1.5 py-1 rounded-md text-border-primary hover:text-border-primary-hover hover:bg-[#14eba3]/20 transition duration-500 ease-in-out border border-border-primary cursor-help"
                 key={index}
               >
                 {item}
