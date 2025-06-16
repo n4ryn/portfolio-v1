@@ -1,6 +1,7 @@
 import { memo } from "react";
-import { socialsInfo } from "../constants/socials";
 import { motion } from "motion/react";
+
+import { socialsInfo } from "../constants/socials";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
