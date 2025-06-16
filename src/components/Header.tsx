@@ -1,5 +1,6 @@
-import ThemeToggle from "./ThemeToggle";
 import { motion } from "motion/react";
+
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const leftContentVariants = {
@@ -53,7 +54,7 @@ const Header = () => {
           <img
             src="/vinay.jpeg"
             alt="Logo"
-            className="h-12 w-12 rounded-full"
+            className="h-12 w-12 rounded-full shadow-[#14eba3_-3px_0px_4px_0px]"
           />
         </motion.a>
         <div className="flex flex-col">

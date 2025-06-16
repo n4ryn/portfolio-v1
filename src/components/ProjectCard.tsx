@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 
   return (
     <motion.div
-      className="rounded-xl shadow-lg shadow-[#14eba3]/20 hover:shadow-[#14eba3]/40 border-b-2 border-r-2 border-[#14eba3]/30"
+      className="rounded-xl shadow-lg shadow-[#14eba3]/20 hover:shadow-[#14eba3]/40 border-b-2 border-l-2 border-[#14eba3]/30"
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}

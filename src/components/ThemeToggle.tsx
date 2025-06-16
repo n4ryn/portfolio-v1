@@ -1,6 +1,7 @@
 import { RxMoon, RxSun } from "react-icons/rx";
-import { useTheme } from "../context/theme.context.tsx";
 import { motion, AnimatePresence } from "motion/react";
+
+import { useTheme } from "../context/theme.context.tsx";
 
 const ThemeToggle = () => {
   const { isDarkMode, setIsDarkMode } = useTheme();
@@ -10,7 +11,6 @@ const ThemeToggle = () => {
     setIsDarkMode(newTheme);
   };
 
-  // Animation variants
   const buttonVariants = {
     hover: {
       scale: 1.1,
@@ -22,7 +22,6 @@ const ThemeToggle = () => {
     },
   };
 
-  // For different rise/set directions based on icon
   const sunVariants = {
     initial: { opacity: 0, y: 20, scale: 0.5 },
     animate: {
@@ -87,7 +86,7 @@ const ThemeToggle = () => {
               exit="exit"
               variants={sunVariants}
             >
-              <RxSun className="w-6 h-6 text-yellow-500" />
+              <RxSun className="w-6 h-6 text-yellow-400 hover:text-[#14eba3]" />
             </motion.div>
           ) : (
             <motion.div
@@ -98,7 +97,7 @@ const ThemeToggle = () => {
               exit="exit"
               variants={moonVariants}
             >
-              <RxMoon className="w-6 h-6 text-gray-400" />
+              <RxMoon className="w-6 h-6 text-gray-400 hover:text-[#14eba3]" />
             </motion.div>
           )}
         </AnimatePresence>
