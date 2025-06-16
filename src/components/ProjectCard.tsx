@@ -92,7 +92,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <motion.div className="flex flex-wrap gap-2 mt-4">
             {project.techStack.map((item, index) => (
               <p
-                className="text-[10px] px-1.5 py-1 rounded-md text-border-primary hover:text-border-primary-hover hover:bg-[#14eba3]/20 transition duration-500 ease-in-out border border-border-primary cursor-help"
+                className="text-[10px] px-1.5 py-1 rounded-md text-border-primary hover:text-border-primary-hover hover:bg-[#14eba3]/20 transition duration-500 ease-in-out border border-border-primary cursor-pointer"
                 key={index}
               >
                 {item}
