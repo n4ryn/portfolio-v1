@@ -1,6 +1,8 @@
-import { projects } from "../constants/projects";
-import ProjectCard from "./ProjectCard";
 import { motion } from "motion/react";
+
+import ProjectCard from "./ProjectCard";
+
+import { projects } from "../constants/projects";
 
 const Projects = () => {
   const containerVariants = {
@@ -15,14 +17,14 @@ const Projects = () => {
 
   return (
     <motion.section
-      className="mb-12"
+      className="mb-14"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
     >
       <motion.h2
-        className="font-bold text-md text-text-primary mb-4"
+        className="font-semibold italic text-xl text-text-primary mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

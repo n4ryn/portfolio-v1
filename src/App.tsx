@@ -13,8 +13,8 @@ function App() {
         <main className="mx-auto p-6 w-full">
           <Header />
           <About />
-          <Experience />
           <Projects />
+          <Experience />
         </main>
         <Footer />
       </div>
