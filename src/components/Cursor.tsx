@@ -6,7 +6,7 @@ import { useCursor } from "../context/cursor.context";
 export default function Cursor() {
   const { isActive, cursorSize } = useCursor();
 
-  const mouse = useRef({ x: 10, y: 10 });
+  const mouse = useRef({ x: -10, y: -10 });
   const delayedMouse = useRef({ x: 0, y: 0 });
   const rafId = useRef<number | null>(null);
   const circle = useRef<HTMLDivElement>(null);
