@@ -47,7 +47,6 @@ const About = () => {
     },
   };
 
-  // Child animation variants
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -60,7 +59,6 @@ const About = () => {
     },
   };
 
-  // Child animation variants
   const fadeInVariant = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -85,7 +83,7 @@ const About = () => {
         variants={itemVariants}
       >
         Crafting{" "}
-        <span className="italic font-medium font-serif">
+        <span className="italic font-medium font-serif" data-cursor="true">
           digital experiences
         </span>{" "}
         that{" "}
@@ -102,7 +100,7 @@ const About = () => {
       </motion.h1>
 
       <motion.p
-        className="text-text-secondary font-light text-sm mb-4 leading-6"
+        className="text-text-secondary font-light text-md mt-6 mb-8 leading-6"
         variants={itemVariants}
       >
         {DESCRIPTION_TEXT.parts.map((part, index) =>
@@ -121,14 +119,6 @@ const About = () => {
           )
         )}
       </motion.p>
-
-      {/* <div className="flex justify-between p-4 bg-background-secondary border-2 border-border-primary rounded-lg">
-        npx n4ryn-cli
-        <RxCopy
-          onClick={() => navigator.clipboard.writeText("npx n4ryn-cli")}
-          className="cursor-pointer text-text-secondary hover:text-text-primary transition-colors duration-200"
-        />
-      </div> */}
 
       <motion.div
         className="flex justify-start items-center gap-4"
