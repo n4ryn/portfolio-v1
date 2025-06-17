@@ -2,15 +2,9 @@
 
 A minimal, responsive developer portfolio built with React.js, TypeScript, and Tailwind CSS. It features smooth animations using Framer Motion and GSAP.
 
-<br />
-<br />
-
-![Portfolio](./public/project-1-light.png)
-
-<br />
-<br />
-
-![Portfolio](./public/project-1-dark.png)
+| Light Theme                                | Dark Theme                                |
+| ------------------------------------------ | ----------------------------------------- |
+| ![Portfolio](./public/project-1-light.png) | ![Portfolio](./public/project-1-dark.png) |
 
 ### [Live Demo](https://n4ryn.com/)
 
