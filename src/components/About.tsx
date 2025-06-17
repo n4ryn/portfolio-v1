@@ -10,7 +10,7 @@ import { DESCRIPTION_TEXT } from "../constants/about";
 
 const HighlightedText = ({ text }: { text: string }) => (
   <motion.span
-    className="text-text-primary font-medium"
+    className="text-text-primary font-medium bg-background-secondary px-2 rounded-md hover:cursor-pointer hover:bg-[#14eba3]/30"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
@@ -100,7 +100,7 @@ const About = () => {
       </motion.h1>
 
       <motion.p
-        className="text-text-secondary font-light text-md mt-6 mb-8 leading-6"
+        className="text-text-secondary font-light text-md mt-6 mb-8 leading-6 text-justify"
         variants={itemVariants}
       >
         {DESCRIPTION_TEXT.parts.map((part, index) =>
