@@ -10,7 +10,6 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
       y: 0,
       transition: {
         duration: 1,
-        delay: experience.id * 0.2,
         ease: "easeOut",
       },
     },
@@ -23,7 +22,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
       y: 0,
       transition: {
         duration: 0.5,
-        delay: experience.id * 0.1 + 0.2,
+        delay: 0.2,
       },
     },
   };
@@ -31,6 +30,9 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   return (
     <motion.div
       variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
       className="group relative border-l border-[#14eba3] pl-4"
     >
       {/* Animated dot on timeline */}

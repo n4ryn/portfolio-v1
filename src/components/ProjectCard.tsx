@@ -15,7 +15,6 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
       y: 0,
       transition: {
         duration: 0.5,
-        delay: project.id * 0.1,
         ease: "easeOut",
       },
     },
@@ -29,7 +28,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
       y: 0,
       transition: {
         duration: 0.6,
-        delay: project.id * 0.1 + 0.2,
+        delay: 0.2,
       },
     },
   };
@@ -45,6 +44,9 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
     <motion.div
       className="rounded-xl shadow-lg shadow-[#14eba3]/20 hover:shadow-[#14eba3]/40 border-b-2 border-l-2 border-[#14eba3]/30"
       variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
     >
@@ -75,17 +77,15 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           </motion.h3>
           <motion.p
             className="mt-0 text-xs font-normal text-text-secondary"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: project.id * 0.1 + 0.4 }}
+            variants={cardVariants}
+            transition={{ delay: 0.4 }}
           >
             {project.projectStart} - {project.projectEnd}
           </motion.p>
           <motion.p
             className="mt-4 text-xs font-light text-text-primary line line-clamp-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: project.id * 0.1 + 0.4 }}
+            variants={cardVariants}
+            transition={{ delay: 0.4 }}
           >
             {project.description}
           </motion.p>
