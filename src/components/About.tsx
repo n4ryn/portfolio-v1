@@ -10,10 +10,11 @@ import { DESCRIPTION_TEXT } from "../constants/about";
 
 const HighlightedText = ({ text }: { text: string }) => (
   <motion.span
-    className="text-text-primary font-medium bg-background-secondary px-2 rounded-md hover:cursor-pointer hover:bg-[#14eba3]/30"
+    className="text-text-primary font-medium bg-background-secondary px-2 rounded-md"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
+    data-cursor="true"
   >
     {text}
   </motion.span>
