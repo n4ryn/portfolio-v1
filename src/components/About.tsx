@@ -10,7 +10,7 @@ import { DESCRIPTION_TEXT } from "../constants/about";
 
 const HighlightedText = ({ text }: { text: string }) => (
   <motion.span
-    className="text-text-primary font-medium bg-background-secondary px-2 rounded-md"
+    className="text-text-primary font-medium"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
