@@ -41,4 +41,23 @@ export const projects: ProjectType[] = [
     projectStart: "May 2025",
     projectEnd: "Jun 2025",
   },
+  {
+    id: 3,
+    title: "GenAi Tokenizer",
+    description:
+      "GenAi Tokenizer is an interactive tokenizer playground to explore how text breaks into tokens, how unique token IDs are assigned, and how decoding works - all powered by a custom tokenizer.",
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Vercel",
+    ],
+    live: "https://genai-tokenizer.vercel.app",
+    github: "https://github.com/n4ryn/genai-tokenizer",
+    image: ["/project-3.png"],
+    projectStart: "Aug 2025",
+    projectEnd: "Aug 2025",
+  },
 ];
