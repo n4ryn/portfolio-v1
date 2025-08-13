@@ -49,6 +49,7 @@ export const projects: ProjectType[] = [
     techStack: [
       "React.js",
       "TypeScript",
+      "Github Gist API",
       "Vite",
       "Tailwind CSS",
       "DaisyUI",
