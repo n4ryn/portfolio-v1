@@ -34,3 +34,12 @@ export interface ExperienceType {
   endDate: string;
   description: string;
 }
+
+export interface BlogType {
+  node: {
+    title: string;
+    url: string;
+    publishedAt: string;
+    brief: string;
+  };
+}
