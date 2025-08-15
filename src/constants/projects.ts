@@ -61,4 +61,24 @@ export const projects: ProjectType[] = [
     projectStart: "Aug 2025",
     projectEnd: "Aug 2025",
   },
+  {
+    id: 4,
+    title: "ChatWiz",
+    description:
+      "ChatWiz is a multi-persona AI chat app with Markdown responses, code highlighting, and per-room chat history.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Vercel",
+      "OpenAI",
+      "Zustand",
+    ],
+    live: "https://chatwiz-eight.vercel.app",
+    github: "https://github.com/n4ryn/chatwiz",
+    image: ["/project-4.png"],
+    projectStart: "Aug 2025",
+    projectEnd: "Aug 2025",
+  },
 ];
