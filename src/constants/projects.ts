@@ -75,7 +75,7 @@ export const projects: ProjectType[] = [
       "OpenAI",
       "Zustand",
     ],
-    live: "https://chatwiz-eight.vercel.app",
+    live: "https://chatwiz-u4v4.vercel.app/",
     github: "https://github.com/n4ryn/chatwiz",
     image: ["/project-4.png"],
     projectStart: "Aug 2025",
